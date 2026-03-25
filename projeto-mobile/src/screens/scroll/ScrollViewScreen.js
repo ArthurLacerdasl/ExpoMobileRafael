@@ -1,31 +1,62 @@
 import React from "react";
-import { ScrollView, Text, View, Button } from "react-native";
+import {
+  ScrollView,
+  Text,
+  View,
+  StyleSheet,
+  SafeAreaView,
+} from "react-native";
 
 export default function ScrollViewScreen() {
+  const data = [
+    "Ferrari",
+    "Porsche",
+    "Lamborghini",
+    "BMW",
+    "Mercedes-Benz",
+    "Audi",
+    "McLaren",
+    "Bugatti",
+    "Chevrolet",
+    "Ford",
+    "Toyota",
+  ];
+
   return (
-    <View style={{ flex: 1 }}>
-      
-      <View style={{ padding: 10 }}>
-        <Button title="Exemplo ScrollView" onPress={() => {}} />
-      </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.header}>Lista Simples</Text>
 
       <ScrollView>
-        {Array.from({ length: 30 }).map((_, index) => (
+        {data.map((item, index) => (
           <View
             key={index}
-            style={{
-              padding: 15,
-              borderBottomWidth: 1,
-              borderColor: "#ccc",
-              backgroundColor: index % 2 === 0 ? "#f9f9f9" : "#fff",
-            }}
+            style={[
+              styles.item,
+              { backgroundColor: index % 2 === 0 ? "#f2f2f2" : "#fff" },
+            ]}
           >
-            <Text style={{ fontSize: 16 }}>
-              Item Scroll {index + 1}
-            </Text>
+            <Text style={styles.text}>{item}</Text>
           </View>
         ))}
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  header: {
+    fontSize: 22,
+    fontWeight: "bold",
+    textAlign: "center",
+    padding: 15,
+  },
+  item: {
+    padding: 15,
+    borderBottomWidth: 1,
+    borderColor: "#ccc",
+  },
+  text: {
+    fontSize: 16,
+  },
+});

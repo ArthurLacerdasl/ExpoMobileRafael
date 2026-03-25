@@ -12,9 +12,9 @@ export default function SectionListScreen() {
   const [expandedSections, setExpandedSections] = useState([]);
 
   const sections = [
-    { title: "Frutas", data: ["Maçã", "Banana", "Laranja"] },
-    { title: "Verduras", data: ["Alface", "Couve", "Espinafre"] },
-    { title: "Bebidas", data: ["Água", "Suco", "Refrigerante"] },
+    { title: "Brasileirão Série A", data: ["Athletico Paranaense", "Atlético Goianiense", "Atlético Mineiro", "Bahia", "Botafogo", "Bragantino", "Corinthians", "Coritiba", "Cruzeiro", "Cuiabá", "Flamengo", "Fluminense", "Fortaleza", "Grêmio", "Internacional", "Juventude", "Palmeiras", "Santos", "São Paulo", "Vasco da Gama"] },
+    { title: "Brasileirão Série B", data: ["Amazonas", "América Mineiro", "Avaí", "Botafogo-SP", "Ceará", "Chapecoense", "CRB", "Goiás", "Guarani", "Ituano", "Londrina", "Mirassol", "Novorizontino", "Operário-PR", "Ponte Preta", "Sampaio Corrêa", "Sport", "Tombense", "Vila Nova", "Vitória"] },
+    { title: "Brasileirão Série C", data: ["ABC", "Altos", "Aparecidense", "Brusque", "Caxias", "Confiança", "CSA", "Ferroviária", "Figueirense", "Floresta", "Manaus", "Náutico", "Paysandu", "Remo", "São Bernardo", "São José-RS", "Volta Redonda", "Ypiranga-RS", "Botafogo-PB", "América-RN"] },
   ];
 
   function toggleSection(title) {
